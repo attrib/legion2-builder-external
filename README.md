@@ -13,7 +13,6 @@ In the LegionTD2Builder object some settings can be changed.
     <script type="application/javascript">
         var LegionTD2Builder = {
             containerId: 'someId',
-            basePath: '/builder',
             gaId: 'google-analytics-id'
         };
     </script> 
@@ -28,10 +27,18 @@ The id of the div where the builder should be added.
 Can be empty or add your google analytics id, if you want to track page changes.
 The gaID usually has the format like UA-xxxxxxxx-x
 
-### basePath (optional)
-
-Set a basePath if the builder is not running on the main page. Defaults to "/".
-
 ### iconsPath (optional)
 
 Set the path of the Icons folder, e.g. "images/Icons". Defaults to "/Icons".
+
+### basePath (optional)
+
+Set a basePath if the builder is not running on the main page. Defaults to `window.location.pathname`.
+
+Default should be fine in most of the cases.
+
+### queryString (optional)
+
+A query string which should be added to the URL. Defaults to current search location.
+
+Default should be fine in most of the cases.
